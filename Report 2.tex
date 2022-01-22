@@ -1,0 +1,145 @@
+ % Preamble
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[letter,
+bindingoffset=0.2in,
+            left=1in,
+            r`ight=1in,
+            top=1in,
+            bottom=1in,]{geometry}
+\usepackage{graphicx}\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue}
+
+\title{Early Detection and Intervention of Sepsis}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Joel Chávez Gómez}
+\lhead{Early Detection and Intervention of Sepsis}
+\rfoot{\thepage}
+
+\begin{document}
+\begin{Huge}
+\noindent{Decision Support System Report}\\
+\end{Huge}
+
+\section{Abstract} 
+
+This DSS, <name>, was designed to <objective> in the context of <context>. At baseline, the rate is <baseline rate>. The goal of the DSS is <objective> among <target population>. The DSS is designed so that the <user> will <target action> in the Workflow of <Workflow>, and the specific step of <Workflow step>, although others are involved as well: <Other roles involved>. The DSS “lives” in the context of <information system>, and employs the specific “widget” of <widget>. Under the covers, it deploys <knowledge representation in use>. The DSS will be monitored by <Monitoring>, with special attention to the adverse event of <Adverse events>. More generally, the system will be evaluated by <Evaluation>. The knowledge for the DSS will be acquired and maintained by <Knowledge acquisition>. 
+
+<Citation of the report> 
+\begin{itemize}
+\item{\textbf{Name of the project:}}
+
+\end{itemize}
+
+
+Items below are about the problems and how you would know that any solution would work. Do NOT talk about the DSS solution in these items. 
+
+Objectives of the solution 
+
+List what is to be minimized or maximized 
+
+Justify your choice.  
+
+Context 
+
+Location (clinic, home, health managers's office, government agency office, etc.) or time (clinic visit, mornings, daily check, etc.), which is the primary focus of your intervention. Provide a narrative: What is the problem you are attempting to solve? Why is it a problem? What are they not doing it now (at a high level; in #10, you'll tackle the low level)? Why might decision support be a solution?  
+
+[Use only 2 or 3 sentences. E.g., "Pneumonia kills people. Treatment is effective. Decision support may increase its timely treatment." 
+
+Target actions 
+
+List of actions you want the *user* to take, as a result of the decision support (e.g., "appropriate prescriptions", "increase exercise", "call up records of outlier patients", "issue public health alert", etc.). Provide a justification.  
+
+Baseline performance 
+
+The number of lives/ADEs/whatever else as appropriate to be saved/averted per year, as the basis of comparison for a full evaluation, if fully implemented. Against what number(s) will you compare the results of your evaluation 
+
+Desired outcome 
+
+List proximal results of proper actions from #d (e.g., "fewer adverse drug events"). These outcome lead to fulfilling the objective (#b). Justify your list. 
+
+Target population 
+
+The intentional (above-the-line) set of patients (or situations) that you are aimed at (and who comprise the denominator of evaluation metrics). Then the extensional (below-the-line) way you would define. (E.g., Intention = "Patients with low back pain." Extensional = value set of ICD10 codes for low back pain) 
+
+Report Outline: Part II
+less 
+You now begin describing your solution in the sections below. 
+
+Possible solutions 
+
+List possible system interventions, including the one you’ll be describing in more detail and including those probably outside the CDS. E.g., what could be done before the patient even gets before your user; what could be done by society to prevent the situation from occurring at all; how might the home be "instrumented" to prevent contact with the health system... Explain whether your intervention should work the best, the least, or intermediate, compared to decision support at these other locations in the decision making process/ecology. 
+
+Items Below are from the HIMSS Framework 
+
+Primary stakeholders 
+
+List the roles (<10 roles). How would you motivate them? 
+
+Champion 
+
+Pros and cons of making this champion the target of decision making to get the application done. (In health care, it would be a clinician. In consumer health---?) 
+
+User 
+
+Name by role. Justify. What specific needs of theirs need to be satisfied? What are the barriers to their "doing the right thing"? 
+
+Other roles involved 
+
+A brief list of other roles primarily involved. You will use these in the next item, Workflow. 
+
+Workflow 
+
+Name the workflow (e.g., “Tracking blood pressure”). Provide a SIMPLE swimlane−activity diagram, with one lane each for the user, the other roles (from #k) and for the information system housing the DSS. Identify (shading or color) the step(s) where the DSS is mostly involved. 
+
+Workflow Step 
+
+Name the step (should be taken from, or refer to a location in, the Workflow Diagram). Justify in terms of the 5 Rights. 
+
+Information system 
+
+Name the type of system (e.g., CIS; biosurveillance). Justify. Note the mHealth apps have the most complex "system", because of the disparate components. 
+
+Design 
+
+How would you go about designing the key interactive component (widget) of the DSS? Would it be synchronous or asynchronous? Soft stop or hard stop? How will you prevent alert fatigue? 
+
+User interface/Widget 
+
+Name the widget (“Medication duplication pop-up”). Provide a mockup. Your visualization should overcome barriers you've identified in #2 and elsewhere. Use any software to create this mockup, including taking a photo of a freehand drawing. But components (and lettering) must be legible and in English. 
+
+Knowledge representation in use 
+
+Which knowledge representation would you use and why? And why not at least 2 others? 
+
+Rule logic 
+
+Provide the key rule(s) for you DSS. If rules are not the key representation for knowledge-in-use, then provide that representation. 
+
+Adverse events 
+
+What errors, stresses, or other undesired actions or outcomes might you expect from your DSS? 
+
+Monitoring 
+
+What will you monitor to make sure the DSS is working as planned and that you are not causing harm listed in Adverse Events? 
+
+Beyond HIMSS 
+
+Evaluation 
+
+How will you evaluate that the DSS has accomplished its purpose? (See #b, #e, and #f, above. You will probably have to go beyond tracking users’ actions.) 
+
+Knowledge acquisition 
+
+Does your DSS requires System 1 or System 2 knowledge? How will you get the knowledge needed for the DSS? How and how frequently will you keep it up to date? 
+
+Lessons learned 
+
+What did you list in this exercise that you might not had listed, had you not taken this course? What important information is missing from this exercise?
+\end{document}

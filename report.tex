@@ -1,0 +1,239 @@
+% Preamble
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[letter,
+bindingoffset=0.2in,
+            left=1in,
+            r`ight=1in,
+            top=1in,
+            bottom=1in,]{geometry}
+\usepackage{graphicx}\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue}
+
+\title{The ESSENCE-FL System}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Joel Chávez Gómez}
+\lhead{The ESSENCE-FL System}
+\rfoot{\thepage}
+\setcounter{section}{0}
+
+\begin{document}
+\begin{Huge}
+\noindent{Using the Informatics Stack to Analyze a Health Information Management System}\\
+\end{Huge}
+Joel Chávez Gómez, January 20, 2022
+\section{Abstract}
+
+This Davies Report concerns the organization \textbf{Florida Department of Health} (FDOH), who implemented the \textit{Electronic Surveillance System for the Early Notification of Community-based Epidemics, Florida} (\textbf{ESSENCE-FL}) System. This organization functions in the "world" of state and county level epidemiologists across FDOH department areas, with the specific imperative of providing quality public health services and promotion of health care standards, and goal of improving internal public health efficiencies and decision making related to disease control efforts. This report focuses on the role of State epidemiologist, whose primary goals are day-today oversight of the system and ensuring project goals are met.\\
+
+I focus on the primary function of outbreak detection and describe its success. I describe its Workflow, and provide an example of the user's interaction with the system, including the cognitive  processes involved (\textir{"least effort"}). I describe the information system put into place, and how it works to support that Workflow and the Functions. I also describe the modules comprising the system \textbf{ESSENCE-FL}, and how they, themselves, are "systems" in their own right. I describe the data, information, knowledge employed by the modules and the system to support those functions. Finally, I describe the technology underlying the information system.
+
+I consider the standards in the system from each level of the Stack, in the context of interoperability. I also describe the privacy, confidentiality, and security concerns addressed and any ethical issues either explicit or implicit in their report.
+
+I close with an assessment of the completeness of this report itself, an assessment of the Stack for describing the project, and with my thoughts on what I gained from the exercise. 
+
+\section{World}
+\begin{itemize}
+\item{\textbf{Within which 'world' does this project "live"?}}\\
+Florida has a population of over 18 million residents and over 80.3 million visitors annually.
+\item{\textbf{What imperative(s) from that world drove the organization to execute this project?}}\\
+Promoting the delivery of health and safety, through the delivery of \textit{quality} public health services
+\item{\textbf{What National Academy of Medicine Initiative Goals played a role, if any?}}\\
+The goals of Vital directions for health and healthcare, by trying to provide to the population better health and well-being, high-value health care, and strong science and technology.
+\item{\textbf{[Advanced: How did the 'world' affect the requirements/specifications/design of the information system solution?]}}\\
+ESSENCE-FL was implemented to meet a diverse set of public health challenges. The system needed to be intuitive on it's use, due to the varying technical skills of County Health Departments (CHD) epidemiological staff. The system design needed to be flexible to incorporate new data streams as they became available and to be able to quickly adapt and update definitions of syndromes and other conditions under surveillance.
+\end{itemize}
+\pagebreak
+
+\section{Organization}
+\begin{itemize}
+\item{\textbf{Name of the organization:}} Florida Department of Health
+
+\item{\textbf{Type of the organization:}} Public Health Organization.
+
+\item{\textbf{Mission statement of the organization:}} Promote and protect the health and safety of all people in Florida through the delivery of quality public health services and promotion of health care standards.
+
+\item{\textbf{What was the organization-level goal for this problem? Remember to start this phrase with the word, “minimizing” or “maximizing.”}}\\
+Minimize the need for specialized and costly training in various data managment, statistical and mapping software packages, following the principles of the cognitive process of "least effort", by minimizing the cognitive load by reducing the time spent accesing data and creating reports and improving decision making related to disease control efforts
+\item{\textbf{Were any “New” Policies or Models (see Module 2) involved?}}\\
+There were new policies implemented from results of the system models, for example, during \textit{Hurricane Irma Post-disaster surveillance}, new policies were developed related to special needs population and public health messaging reminding people to have enough medication on-hand in the event pharmacies and physician offices are closed.
+
+\item{\textbf{What evidence do they provide to demonstrate (evaluate) that the solution addressed/solved their organization-level goal?}}\\
+They make the statement that their organization-level goal was met, and provide examples with data to prove the positive impact they've had with the system on public health.
+
+\item{\textbf{[Advanced: How did the nature of the organization affect requirements, specifications and/or design of the information system solution?}}\\
+The FDOH is comprised by a state health office (central office), with statewide responsibilities, 67 county health departments (CHD), five public health laboratories, and A.G. Holley State TB Hospital. The Division of Disease Control compromises six Bureaus: Epidemiology, Tuberculosis and Refugee Health, Immunizations, HIV/AIDS, AG Holley Hospital, and Sexually Transmitted Diseases and Prevention. Florida has a unitary public health system. All employees working at CHDs are employees of FDOH.
+
+This organization is why the \textbf{ESSENCE-FL} System needed to be simple and easy to understand on it's design, since it's used by a large number of employees with varying levels of technical expertise.
+\end{itemize}
+
+\section{Role}
+\begin{itemize}
+\item{\textbf{Role:}} State Epidemiologist
+
+\item{\textbf{[Advanced: Is this Role a primary (mission-critical) role for this project?]}}\\
+It is, because state epidemiologists are the ones that will conduct analysis for outbreak detection, routine descriptive epidemiologic analysis, and monitor morbidity and mortality trends over time, geography, and across multiple data sources.
+\end{itemize}
+\pagebreak
+
+\section{Functions}
+\begin{itemize}
+\item{\textbf{Name the primary Function this solution is supporting?}}\\
+The primary goal is to improve populations health, by promoting and protecting the health and safety of Florida population. 
+
+\item{\textbf{What is the goal for this Function from the perspective of the Role? Remember to start this phrase with the word, “minimizing” or “maximizing.”}}
+	\begin{itemize}
+		\item{Maximize public health efficiency by minimizing the time spent accessing data and creating reports,  while improving decision-making strategies related to disisease control efforts}
+		\item{minimize the need for specialized and costly trainings in various data management, statistical and mapping software packages;
+	\end{itemize}
+
+\item{\textbf{What evidence is provided to demonstrate (evaluate) that they achieved this goal?}}\\
+Some of the presented evidence are only statements. They state that during the influenza season, a large component of the weekly influenza report were composed mainly of data from the \textbf{ESSENCE-FL} system, and that CHDs use \textbf{ESSENCE-FL} to produce routine reports and newsletters distributed to community partners.
+
+\item{\textbf{[Advanced: Imagine that the system does not accomplish its goal. What evaluation framework (Module 2) might you use, and why?]}}\\
+Since this system poses a major change in the workflow, I would use the \textbf{TOE (Technology-Organization-Enviroment) Framework}. Previously, the users would have to access to different systems in order to perform different parts of their work, and with this system, the would only need one platform that would turn those different systems into modules of one single system, so for the before the adoption of the large amount of users that would use this system, it is needed to define the users perceived benefits (direct and indirect), as well as the organization pereceived financial cost and technical competence.
+\end{itemize}
+
+\section{Workflow}
+\begin{itemize}
+\item{\textbf{How does the report describe the workflow of the Role?}}\\
+All public health users have access to all data sources immediately on log-in. Hospital
+staffs have access to their own hospital(s) data, as well as an aggregate view of the FDOH
+reportable disease data. The system structure can be sub-divided into five areas: data ingestion database, detection database, web database, detection algorithms, and web application. All processes occur in the background without manual intervention.
+
+\item{\textbf{[Advanced: What is missing from this description?]}}\\
+A flowchart could have been used, in order to bettere visualize the work flow.
+
+\item{\textbf{Paste in a screen shot of a user interface relevant to the Role.}}\\
+The screen shot is located in the appendix, at the end of the document. This picture was taken from the ESSENCE-FL users guide, since it wasn't in the report. (Figure 1)
+
+\item{\textbf{What theory of information behavior best applies to user’s interaction with this screen? (Module 3) Why do you say so?}}\\
+The transtheoretic model would be the one that fits best to this User Interface system, as it's supposed to display alerts, graphs, data visualization, which would allow for contemplation and action based on the information displayed.
+\end{itemize}
+\pagebreak
+
+\section{Information System}
+\begin{itemize}
+
+\item{\textbf{What is the name of the system?}}\\
+\textit{Electronic Surveillance System for the Early Notification of Community-based Epidemics, Florida} (ESSENCE-FL)
+
+\item{\textbf{What needs does the report list?}}\\
+The need to be intuitive, easily used by any user, no matter their technological skills.
+
+\item{\textbf{What requirements?}}\\
+The report specifies the requirement of Meaningful Use.
+
+\item{\textbf{What specifications?}}\\
+The ESSENCE-FL system includes four different data sources: the \textit{Data Source-Emergency Department and Urgent Care Center}, \textit{Data Source-State Reportable Disease System, Merlin}, and the \textit{Data Source-Florida Poison Information Center Network (FPCIN)}, \textit{Data Source-Office of Vital Statistics Mortality Data}.
+
+\item{\textbf{What processes of software development did they use? (Module 3)}}\\
+They used a phased approach.
+
+\item{\textbf{Of the architectures presented in Module 3, which comes closest to that in the report?}}\\
+The Population-Centered system architecture come closest to the one described in this report.
+
+\item{\textbf{Looking at the Basic Chronology from Module 2, are there prior policies, departmental systems, or Enterprise systems that this solution depended on?}}\\
+Most likely the CMS "Quality Measure Goals".
+
+\end{itemize}
+
+\section{Module}
+\begin{itemize}
+\item{\textbf{What modules are included in this information system that are most relevant to the Function?}}
+The \textit{Data Source-Emergency Department and Urgent Care Center}, \textit{Data Source-State Reportable Disease System, Merlin}, and the \textit{Data Source-Florida Poison Information Center Network (FPCIN)}, \textit{Data Source-Office of Vital Statistics Mortality Data}.
+
+\item{\textbf{[Advancde: Choose one module. How could it be considered an “information system” on its own?]}}\\
+The Data Source-Office of Vital Statistics Mortality Data culd be considered as a System on it's own, since it has access to data, selection of the desired data which can be separated into categories, according to ICD-10 or ACME codes, and has data visualization.
+\end{itemize}
+
+\section{DIKW}
+\begin{itemize}
+\item{\textbf{What are the primary data and their data types?}}\\
+The primary data are epidemiological measures.
+
+\item{\textbf{What are the most important pieces of information, and what makes them “information”?}}
+The data is obtained from Electronic Health Records, and they are multiple types of data organized in different ways according to the module accesed, like Emergency Department visits, chief complaint, Demographic data.
+
+\item{\textbf{What explicit knowledge does the system use to support the user?}}\\
+The explicit knowledge used is not specified in the report.
+\end{itemize}
+\pagebreak
+
+\section{Technology}
+\begin{itemize}
+\item{\textbf{What technologies support this project?}}\\
+\textbf{ESSENCE-FL} is a multi-tier, secure, web-based application with role-based access
+levels.
+
+\item{\textbf{Where on the Hype Cycle is the most important technology?}}\\
+It is located in the \textit{Slope of Enlightment}
+
+\item{\textbf{Interoperability}}\\
+It participates in data exchanges projects outside of the state, by sending an automated daily data extract of influenza-like illness to the national Distribute (Distributed Surveillance Taskforce for Real-time Influenza Burden Tracking and Evaluation) project sponsored by ISDS.
+\end{itemize}
+\section{Policies}
+
+The disparate data sources collected in ESSENCE-FL support a process that takes
+thousands of individual data points, categorizes and aggregates them, and translates them into “information for action.” Users are able to easily interact with the data, improving speed and efficiency. The following examples highlight uses of ESSENCE-FL that have positively impacted public health practice and outcomes and population health. 
+Data quality is assessed in multiple ways. ESSENCE-FL includes web pages that show
+the date and time it last received files from each data source. The system manager has access to additional web pages that show where files are in the data ingestion process and highlights when errors occur. De-duplication occurs as part of the standard data ingestion process. 
+
+File content data quality concerns are monitored by running comparative analysis against the content of the original data source. For instance, once a month counts of reportable disease data in ESSENCE-FL are compared to the counts in the Merlin system. If errors are found they are documented and resolved by coordination among system administrators. Data quality issues are shared with the users of the data via email distribution lists and other communications.
+
+Privacy and data are protected through a number of security steps (Appendix, Figure 1).
+Data received by ESSENCE-FL in all four modules is de-identified. Unique record-level
+identifiers are produced by the data sender (hospitals, Merlin, FPCIN, vital statistics) and associated with every record.
+
+\section{Privacy, Confidentiality, Security}
+\begin{itemize}
+\item{\textbf{How are privacy concerns addressed?}}\\
+Privacy and data are protected through a number of security steps. Data received by ESSENCE-FL in all four modules is de-identified. Unique record-level identifiers are produced by the data sender (hospitals, Merlin, FPCIN, vital statistics) and associated with every record
+
+\item{\textbf{How are confidentiality concerns addressed?}}\\
+Data received by ESSENCE-FL in all four modules is de-identified.
+
+\item{\textbf{How are security concerns addressed?}}\\
+Transfer, storage and output of data are secured including: secure
+transfer methods (sftp, VPN, public/private keys), web server using SSL encryption, role based
+user access levels (assigned at the time of account creation) by user ID and password and secure(https) web-based application
+\end{itemize}
+\pagebreak
+
+\section{Ethical concerns}
+\begin{itemize}
+
+\item{\textbf{What ethical concerns to the report authors raise?}}\\
+The authors do not raise any ethical concerns on their report.
+
+\item{\textbf{[No right or wrong answer*: What ethical concerns do you see?]}}\\
+By being a web-based application, there is always a risk for security breaches, and the de-identification method is not specified on the report, so there could remain some data that makes it possible for some to identify the owner of the data under certain circunstances (for example, by comparing Hospital Records with the ED visit reported on the System). But in general, the security measures are considered of quality and there are no more ethical concerns.
+\end{itemize}
+
+\section{Reflection [No right or wrong answer*]} 
+\begin{itemize}
+
+\item{\textbf{How complete was the report for filling in this Template?}}\\
+There were some important aspects that lacked detail, like the Workflow, which is only briefly explained. There are no images of the User Interface, the one on the appendix was taken from the Users Manual, and the report lacked diagrams and flowcharts to help explain some processes.
+
+\item{\textbf{What aspects of the report (or the project as a whole) did the Stack analysis miss? (I.e., what further information do you feel is required to get a whole picture of the Davies project?)}}\\
+The report shares data of the positive impact it has had in public health in it's population, which I think it's very important as it reaches the organizational  goal.
+
+\item{\textbf{What did you learn from this assignment?}}\\
+I learned to use The Stack as an analysis method, which helps review some concepts and get a clearer picture of the practical use of The Stack in the real world.
+\end{itemize}
+\pagebreak
+
+\section{Appendix}
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{./imagenes/ESSENCE GUI.png}
+  \caption{User interface of the ESSENCE-FL System, displaying the homepage. taken from the ESSENCE-FL \href{http://www.floridahealth.gov/diseases-and-conditions/disease-reporting-and-management/disease-reporting-and-surveillance/_documents/florida-essence-user-guide.pdf}{Users Guide} }
+  \label{fig:boat1}
+\end{figure}
+
+\end{document}
